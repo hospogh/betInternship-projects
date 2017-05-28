@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+html, body {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #eeeeee;
+  box-sizing: border-box;
+  font-family: Roboto, Arial;
+  padding-left: 50px;
+  padding-top: 20px; }
+
+.shadow-level-1 {
+  box-shadow: 0 0 4px; }
+
+.menu {
+  background: white;
+  cursor: pointer;
+  display: none;
+  user-select: none;
+  width: 160px; }
+  .menu.horizontal {
+    background: white;
+    height: 30px;
+    padding: 0 5px;
+    width: 100%;
+    display: inline-block; }
+    .menu.horizontal > .menu-item > .menu {
+      display: inline-block; }
+  .menu.vertical {
+    left: 0;
+    top: 100%;
+    padding: 5px 0;
+    position: absolute; }
+    .menu.vertical .menu.vertical {
+      left: 100%;
+      top: 0; }
+    .menu.vertical .menu-item {
+      box-sizing: border-box;
+      width: 100%; }
+      .menu.vertical .menu-item:not(.separator) {
+        padding-left: 30px; }
+        .menu.vertical .menu-item:not(.separator) .icon {
+          position: absolute;
+          left: 5px;
+          top: 5px; }
+  .menu .menu-item {
+    display: inline-block;
+    padding: 0 5px;
+    position: relative; }
+    .menu .menu-item:hover {
+      background: #eeeeee; }
+    .menu .menu-item.complex:hover > .menu {
+      display: inline-block; }
+    .menu .menu-item.complex:hover::after {
+      opacity: 1; }
+    .menu .menu-item.complex::after {
+      background: url(../images/right.svg);
+      bottom: 0;
+      content: '';
+      height: 20px;
+      margin: auto 0;
+      opacity: .6;
+      position: absolute;
+      right: 5px;
+      top: 0;
+      width: 20px; }
+    .menu .menu-item:not(.separator) {
+      height: 30px; }
+      .menu .menu-item:not(.separator) > span {
+        line-height: 30px; }
+    .menu .menu-item.separator {
+      border-top: 1px solid;
+      margin: 5px 0; }
+
+.icon {
+  display: inline-block;
+  height: 20px;
+  width: 20px; }
+  .icon.folder {
+    background: url(../images/folder.svg) no-repeat; }
+
+/*# sourceMappingURL=styles.css.map */

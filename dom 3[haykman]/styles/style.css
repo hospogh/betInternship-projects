@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+body {
+  box-sizing: border-box;
+  padding-left: 50px;
+  padding-top: 30px;
+  font-family: Roboto, Arial;
+  background-color: #eeeeee; }
+
+.level-1 {
+  box-shadow: 0 0 4px blue; }
+
+.menu {
+  display: none;
+  width: 150px;
+  background: white;
+  left: 0;
+  padding: 5px 0;
+  user-select: none;
+  cursor: pointer;
+  position: absolute; }
+  .menu .menu {
+    left: 100%;
+    top: 0; }
+  .menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .menu ul li {
+      padding: 0 5px; }
+      .menu ul li:not(.separator)::before {
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 15px;
+        vertical-align: middle; }
+      .menu ul li:not(.separator)::after {
+        margin-right: auto; }
+      .menu ul li:hover {
+        background: #f2f2f2; }
+      .menu ul li.new::before {
+        background: url("../images/ic_new.svg") no-repeat; }
+      .menu ul li.open::before {
+        background: url("../images/ic_open.svg") no-repeat; }
+      .menu ul li.complex {
+        position: relative; }
+        .menu ul li.complex:hover .menu {
+          display: inline-block; }
+        .menu ul li.complex::after {
+          content: '';
+          position: absolute;
+          width: 15px;
+          height: 15px;
+          background: url("../images/ic_right.svg");
+          margin: auto 0;
+          top: 0;
+          right: 5px;
+          bottom: 0; }
+      .menu ul li.separator {
+        border-top: 1px solid;
+        margin: 0;
+        border-color: #A4A4A4; }
+
+.menu-bar {
+  background: white;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px; }
+  .menu-bar .menu-tem {
+    position: relative;
+    padding: 0px 5px;
+    display: inline-block; }
+    .menu-bar .menu-tem:hover {
+      background: #eeeeee; }
+    .menu-bar .menu-tem > .menu {
+      display: inline-block; }
+
+/*# sourceMappingURL=style.css.map */

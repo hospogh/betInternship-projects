@@ -1,0 +1,76 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.navigation-menu {
+    background: #eeeeee;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 20px;
+    width: 200px;
+}
+
+.navigation-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navigation-menu li > a {
+    background: #e0e0e0;
+    border-left: 2px solid transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 5px;
+    width: 100%;
+}
+
+.navigation-menu li > a::before {
+    content: '';
+    display: inline-block;
+    height: 24px;
+    vertical-align: middle;
+    width: 24px;
+}
+
+.navigation-menu li.expandable > a::before {
+    background: url(../images/down-icon.png);
+    transform: rotate(-90deg);
+}
+
+.navigation-menu li > ul {
+    margin-top: 5px;
+}
+
+.navigation-menu li.expandable > ul {
+    box-sizing: border-box;
+    padding-left: 20px;
+}
+
+.navigation-menu li.expandable.expanded > a::before {
+    transform: rotate(0);
+}
+
+.navigation-menu li > a:hover {
+    box-shadow: 0 0 2px;
+}
+
+.navigation-menu .expandable:not(.expanded) > ul {
+    display: none;
+}
+
+.navigation-menu .expanded > a {
+    border-color: #5C6BC0;
+}
+
+.navigation-menu li:not(:first-child) {
+    margin-top: 10px;
+}
+
+.navigation-menu ul a {
+    color: black;
+    text-decoration: none;
+}
