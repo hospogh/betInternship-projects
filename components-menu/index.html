@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Components menu</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/currentStyle.css">
 </head>
 <body>
 <div class="column">
@@ -27,13 +27,14 @@
             </div>
         </div>
         <hr>
-        <div class="menu list">
-            <div class="item"><span class="name">Line spacing</span>
+        <div class="menu ">
+            <div class="item list">
+                <div class="list-name"><span>Line spacing</span></div>
                 <div class="part">
-                    <div class="menu chackbox">
-                        <div class="item item-chackbox"><span>Single</span></div>
-                        <div class="item item-chackbox"><span>1.15</span></div>
-                        <div class="item item-chackbox"><span>Double</span></div>
+                    <div class="menu checkbox">
+                        <div class="item item-checkbox"><span>Single</span></div>
+                        <div class="item item-checkbox"><span>1.15</span></div>
+                        <div class="item item-checkbox"><span>Double</span></div>
                     </div>
                     <hr>
                     <div class="menu">
@@ -74,13 +75,15 @@
         </div>
     </div>
     <div class="part">
-        <div class="menu chackbox">
-            <span class="chackbox-name">Show</span>
-            <div class="item"><span class="name">Grid lines</span></div>
-            <div class="item"><span class="name">Page breaks</span></div>
-            <div class="item"><span class="name">Rules</span></div>
+        <div class="menu checkbox">
+            <div class="checkbox-name">Show</div>
+            <div class="item item-checkbox"><span class="name">Grid lines</span></div>
+            <div class="item item-checkbox"><span class="name">Page breaks</span></div>
+            <div class="item item-checkbox"><span class="name">Rules</span></div>
         </div>
     </div>
+    <script src="lib/jquery-3.2.1.js"></script>
+    <script src="scripts/script.js"></script>
 </div>
 </body>
 </html>

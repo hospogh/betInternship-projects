@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    padding: 0;
+    margin: 0;
+    background: #eeeeee;
+    font-family: "Roboto", sans-serif;
+    /*font-size: 90%;*/
+}
+
+.column {
+    margin: 40px;
+    position: relative;
+    float: left;
+
+}
+
+.column > .part {
+    margin: 30px;
+}
+
+.part {
+    background: #ffffff;
+    height: auto;
+    box-shadow: 0 0 4px #6f6f6f;
+    width: 250px;
+}
+
+.item, .checkbox-name {
+    padding: 5px 10px;
+    height: 25px;
+    position: relative;
+}
+
+.item:hover {
+    background-color: #eeeeee;
+}
+
+.item > .part {
+    z-index: +1;
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+
+.command {
+    float: right;
+}
+
+/*testing*/
+.item-checkbox {
+    padding-left: 34px;
+}
+
+/*checking*/
+.item-checkbox.checked::before {
+    background: url(../images/ic_done_black_24px.svg) no-repeat 0 0 / 30px;
+    content: "";
+    margin: auto 0;
+    position: absolute;
+    opacity: .6;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+}
+
+.list-name::after {
+    background: url(../images/ic_play_arrow_black_24px.svg) no-repeat 0 0 / 16px;
+    bottom: 0;
+    content: '';
+    height: 16px;
+    margin: auto 0;
+    opacity: .6;
+    position: absolute;
+    right: 15px;
+    top: 0;
+    width: 16px;
+}
+
+.item.list .part {
+    display: none;
+}
+
+.item.list:hover > .part {
+    display: inline-block;
+}
